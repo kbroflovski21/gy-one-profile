@@ -734,71 +734,61 @@ p, li { font-size: 17px; line-height: 1.7; color: var(--gray-700); }
 </section>
 
 <!-- ==================== SLIDE 5: Exception Handling ==================== -->
-<section class="slide" id="s5">
-  <div class="slide-label">例外处理</div>
-  <h2>发生变动时怎么办：分级响应与闭环</h2>
-  <p class="subtitle">正常记录自动入档；护士只处理可能改变服务的例外。</p>
+<section class="slide" id="s5" style="justify-content:center;">
+  <div class="slide-label">分级响应</div>
+  <h2>三级事件分类</h2>
+  <p class="subtitle" style="margin-bottom:36px;">每次服务产生的数据，按严重程度分为三级，对应不同的处理方式。</p>
 
-  <div style="display:flex; gap:28px; margin-top:20px;">
+  <div style="display:flex; flex-direction:column; gap:20px; max-width:960px; margin:0 auto;">
 
-    <!-- Left: Three severity levels -->
-    <div style="flex:1;">
-      <div style="padding:16px 20px; border-left:4px solid #EF4444; background:#FEF2F2; border-radius:0 12px 12px 0; margin-bottom:12px; display:flex; justify-content:space-between; align-items:center;">
-        <div>
-          <div style="font-size:17px; font-weight:700; color:#991B1B;">红色 | 紧急</div>
-          <div style="font-size:14px; color:var(--gray-600); margin-top:4px;">严重呼吸困难、意识丧失、窒息、疑似卒中、重伤</div>
+    <!-- Red -->
+    <div style="display:flex; gap:20px; align-items:stretch;">
+      <div style="flex:1; padding:24px 28px; border-left:5px solid #EF4444; background:#FEF2F2; border-radius:0 14px 14px 0;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+          <div style="font-size:20px; font-weight:700; color:#991B1B;">红色 | 紧急事件</div>
         </div>
-        <div style="padding:4px 14px; border-radius:8px; background:#EF4444; color:#fff; font-size:13px; font-weight:700; flex-shrink:0;">立即</div>
+        <p style="font-size:15px; color:var(--gray-700); line-height:1.7;">护理员直接当场求助 120 或联系护士进一步处理。处理后护士手动输入事件信息，更新档案。</p>
       </div>
-      <div style="padding:16px 20px; border-left:4px solid #F59E0B; background:#FFFBEB; border-radius:0 12px 12px 0; margin-bottom:12px; display:flex; justify-content:space-between; align-items:center;">
+      <div style="width:300px; flex-shrink:0; padding:20px 24px; border-radius:14px; background:#FEF2F2; border:1px solid #FECACA; display:flex; align-items:center;">
         <div>
-          <div style="font-size:17px; font-weight:700; color:#92400E;">橙色 | 急迫</div>
-          <div style="font-size:14px; color:var(--gray-600); margin-top:4px;">新发意识混乱、持续异常、伤口恶化、摄入显著下降</div>
+          <div style="font-size:12px; color:#991B1B; font-weight:600; margin-bottom:6px;">示例</div>
+          <p style="font-size:15px; color:var(--gray-700); line-height:1.6;">老人在服务当场昏迷</p>
         </div>
-        <div style="padding:4px 14px; border-radius:8px; background:#F59E0B; color:#fff; font-size:13px; font-weight:700; flex-shrink:0;">30-60 分钟</div>
-      </div>
-      <div style="padding:16px 20px; border-left:4px solid #FBBF24; background:#FFFDF5; border-radius:0 12px 12px 0; margin-bottom:12px; display:flex; justify-content:space-between; align-items:center;">
-        <div>
-          <div style="font-size:17px; font-weight:700; color:#78350F;">黄色 | 趋势</div>
-          <div style="font-size:14px; color:var(--gray-600); margin-top:4px;">活动、营养、排泄、用药或功能持续下降</div>
-        </div>
-        <div style="padding:4px 14px; border-radius:8px; background:#FBBF24; color:#78350F; font-size:13px; font-weight:700; flex-shrink:0;">24 小时内</div>
       </div>
     </div>
 
-    <!-- Right: Closure process -->
-    <div style="width:360px; flex-shrink:0; padding:20px 24px; border-radius:14px; background:var(--gray-50); border:1px solid var(--gray-200);">
-      <h4 style="margin-bottom:14px; text-align:center;">每条任务必须走到关单</h4>
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-        <div style="width:26px; height:26px; border-radius:50%; background:#10B981; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
-        <span style="font-size:14px; color:var(--gray-700);">核实事实与数据可信度</span>
+    <!-- Yellow -->
+    <div style="display:flex; gap:20px; align-items:stretch;">
+      <div style="flex:1; padding:24px 28px; border-left:5px solid #F59E0B; background:#FFFBEB; border-radius:0 14px 14px 0;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+          <div style="font-size:20px; font-weight:700; color:#92400E;">黄色 | 预警事件</div>
+        </div>
+        <p style="font-size:15px; color:var(--gray-700); line-height:1.7;">由 AI 判断触发，需要护士复核。预警事件有可能需要护士提示参保人或其家属。</p>
       </div>
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-        <div style="width:26px; height:26px; border-radius:50%; background:#10B981; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
-        <span style="font-size:14px; color:var(--gray-700);">护士判断并调整风险级别</span>
-      </div>
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-        <div style="width:26px; height:26px; border-radius:50%; background:#10B981; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
-        <span style="font-size:14px; color:var(--gray-700);">记录动作、责任人与完成时间</span>
-      </div>
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-        <div style="width:26px; height:26px; border-radius:50%; background:#10B981; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">4</div>
-        <span style="font-size:14px; color:var(--gray-700);">24/72h 或约定周期复查</span>
-      </div>
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-        <div style="width:26px; height:26px; border-radius:50%; background:#10B981; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">5</div>
-        <span style="font-size:14px; color:var(--gray-700);">改善 / 未变 / 恶化 / 失访</span>
-      </div>
-      <div style="display:flex; align-items:center; gap:10px;">
-        <div style="width:26px; height:26px; border-radius:50%; background:#10B981; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">6</div>
-        <span style="font-size:14px; color:var(--gray-700);">更新计划；必要时重建基线</span>
+      <div style="width:300px; flex-shrink:0; padding:20px 24px; border-radius:14px; background:#FFFBEB; border:1px solid #FDE68A; display:flex; align-items:center;">
+        <div>
+          <div style="font-size:12px; color:#92400E; font-weight:600; margin-bottom:6px;">示例</div>
+          <p style="font-size:15px; color:var(--gray-700); line-height:1.6;">老人在连续两次服务中都表现出严重腹泻</p>
+        </div>
       </div>
     </div>
 
-  </div>
+    <!-- Green -->
+    <div style="display:flex; gap:20px; align-items:stretch;">
+      <div style="flex:1; padding:24px 28px; border-left:5px solid #10B981; background:#F0FDF4; border-radius:0 14px 14px 0;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+          <div style="font-size:20px; font-weight:700; color:#065F46;">绿色 | 正常记录</div>
+        </div>
+        <p style="font-size:15px; color:var(--gray-700); line-height:1.7;">正常记录自动入档，不需要任何人工介入。</p>
+      </div>
+      <div style="width:300px; flex-shrink:0; padding:20px 24px; border-radius:14px; background:#F0FDF4; border:1px solid #BBF7D0; display:flex; align-items:center;">
+        <div>
+          <div style="font-size:12px; color:#065F46; font-weight:600; margin-bottom:6px;">示例</div>
+          <p style="font-size:15px; color:var(--gray-700); line-height:1.6;">无特殊情况，各项观察正常</p>
+        </div>
+      </div>
+    </div>
 
-  <div style="margin-top:16px; padding:14px 24px; background:linear-gradient(135deg, #F0FDF4, #ECFDF5); border:1.5px solid #86EFAC; border-radius:10px; text-align:center;">
-    <p style="font-size:15px; color:#065F46; font-weight:600;">预警不是终点。没有复查结果和计划更新，就不能证明健康管理发生过。</p>
   </div>
 </section>
 
