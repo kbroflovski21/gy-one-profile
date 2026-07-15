@@ -633,58 +633,103 @@ p, li { font-size: 17px; line-height: 1.7; color: var(--gray-700); }
 </section>
 
 <!-- ==================== SLIDE 4: Service Flow ==================== -->
-<section class="slide" id="s4">
+<section class="slide" id="s4" style="padding: 40px 56px 36px;">
   <div class="slide-label">业务模型</div>
-  <h2>按服务节点产生数据，正常自动入档，只在例外时打扰护士</h2>
+  <h2>以"档"为中心的健康管理闭环</h2>
 
-  <div style="display:flex; gap:28px; margin-top:24px;">
+  <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+    <svg viewBox="0 0 1100 480" style="width:100%; max-width:1100px; height:auto;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="a1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/>
+        </marker>
+        <marker id="a2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#C68B3E" stroke-width="1.5" stroke-linejoin="round"/>
+        </marker>
+        <marker id="a3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#10B981" stroke-width="1.5" stroke-linejoin="round"/>
+        </marker>
+        <marker id="a4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round"/>
+        </marker>
+      </defs>
 
-    <!-- Left: 5-step flow -->
-    <div style="flex:1;">
-      <div style="display:flex; align-items:center; gap:12px; padding:16px 20px; background:#EFF6FF; border-radius:12px; margin-bottom:10px;">
-        <div style="width:32px; height:32px; border-radius:50%; background:#3B82F6; color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
-        <div><b style="font-size:16px; color:var(--gray-900);">服务前</b><span style="font-size:14px; color:var(--gray-500); margin-left:12px;">AI 展示 3-5 条个性化注意事项</span></div>
-      </div>
-      <div style="display:flex; align-items:center; gap:12px; padding:16px 20px; background:#EFF6FF; border-radius:12px; margin-bottom:10px;">
-        <div style="width:32px; height:32px; border-radius:50%; background:#3B82F6; color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
-        <div><b style="font-size:16px; color:var(--gray-900);">服务中</b><span style="font-size:14px; color:var(--gray-500); margin-left:12px;">护理员按计划执行；急性事件走独立入口</span></div>
-      </div>
-      <div style="display:flex; align-items:center; gap:12px; padding:16px 20px; background:#EFF6FF; border-radius:12px; margin-bottom:10px;">
-        <div style="width:32px; height:32px; border-radius:50%; background:#3B82F6; color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
-        <div><b style="font-size:16px; color:var(--gray-900);">服务后</b><span style="font-size:14px; color:var(--gray-500); margin-left:12px;">一页快照：生命体征 + 观察问卷 + 特殊情况</span></div>
-      </div>
-      <div style="display:flex; align-items:center; gap:12px; padding:16px 20px; background:#FFF7ED; border-radius:12px; margin-bottom:10px;">
-        <div style="width:32px; height:32px; border-radius:50%; background:var(--gold); color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">4</div>
-        <div><b style="font-size:16px; color:var(--gray-900);">系统处理</b><span style="font-size:14px; color:var(--gray-500); margin-left:12px;">结构化、与基线比较、趋势聚合、识别例外</span></div>
-      </div>
-      <div style="display:flex; align-items:center; gap:12px; padding:16px 20px; background:#F0FDF4; border-radius:12px;">
-        <div style="width:32px; height:32px; border-radius:50%; background:#10B981; color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">5</div>
-        <div><b style="font-size:16px; color:var(--gray-900);">人工闭环</b><span style="font-size:14px; color:var(--gray-500); margin-left:12px;">护士核实并决定：观察、调整、就医或升级</span></div>
-      </div>
-    </div>
+      <!-- Center circle: 档 -->
+      <circle cx="240" cy="240" r="130" fill="url(#cgrad)" stroke="#C68B3E" stroke-width="3"/>
+      <defs>
+        <radialGradient id="cgrad" cx="50%" cy="40%"><stop offset="0%" stop-color="#FFFBF5"/><stop offset="100%" stop-color="#FFF0DB"/></radialGradient>
+      </defs>
+      <text x="240" y="215" text-anchor="middle" fill="#7C4D12" font-size="40" font-weight="800">档</text>
+      <text x="240" y="248" text-anchor="middle" fill="#A0764A" font-size="15">个人健康基线</text>
+      <text x="240" y="270" text-anchor="middle" fill="#A0764A" font-size="15">护理计划 &middot; 全周期记录</text>
 
-    <!-- Right: AI vs Human -->
-    <div style="width:380px; flex-shrink:0;">
-      <div style="padding:20px 24px; border-radius:12px; border:1px solid #BFDBFE; background:#F8FBFF; margin-bottom:14px;">
-        <h4 style="color:#1E40AF; margin-bottom:10px;">AI 自动完成</h4>
-        <ul class="bullet-list" style="margin-top:0;">
-          <li style="font-size:13px;">与个人基线和近期趋势比较</li>
-          <li style="font-size:13px;">运行红旗规则，组合信号</li>
-          <li style="font-size:13px;">合并重复异常，生成护士摘要</li>
-          <li style="font-size:13px;">从已审核结果生成护理提示和报告</li>
-        </ul>
-      </div>
-      <div style="padding:20px 24px; border-radius:12px; border:1px solid #FECACA; background:#FFF5F5;">
-        <h4 style="color:#991B1B; margin-bottom:10px;">人工必须介入</h4>
-        <ul class="bullet-list" style="margin-top:0;">
-          <li style="font-size:13px;"><b>护理员</b>：观察事实、执行计划、复测与上报</li>
-          <li style="font-size:13px;"><b>护士</b>：核实、分诊、护理介入、调整计划</li>
-          <li style="font-size:13px;"><b>家属</b>：补充事实、配合照护与重要决策</li>
-        </ul>
-        <p style="font-size:12px; color:#991B1B; margin-top:10px; line-height:1.5;">AI 不单独决定：诊断、改药、护理计划变更、是否转诊，以及任何需要承担医疗责任的结论。</p>
-      </div>
-    </div>
+      <!-- Step 1: 服务前 -->
+      <rect x="480" y="24" width="240" height="80" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+      <circle cx="508" cy="50" r="14" fill="#3B82F6"/>
+      <text x="508" y="55" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">1</text>
+      <text x="540" y="50" fill="#1F2937" font-size="16" font-weight="700">服务前</text>
+      <text x="540" y="78" fill="#6B7280" font-size="13">AI 展示个性化注意事项</text>
 
+      <!-- Step 2: 服务中 -->
+      <rect x="480" y="124" width="240" height="80" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+      <circle cx="508" cy="150" r="14" fill="#3B82F6"/>
+      <text x="508" y="155" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">2</text>
+      <text x="540" y="150" fill="#1F2937" font-size="16" font-weight="700">服务中</text>
+      <text x="540" y="178" fill="#6B7280" font-size="13">护理员按计划执行</text>
+
+      <!-- Step 3: 服务后 -->
+      <rect x="480" y="224" width="240" height="80" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+      <circle cx="508" cy="250" r="14" fill="#3B82F6"/>
+      <text x="508" y="255" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">3</text>
+      <text x="540" y="250" fill="#1F2937" font-size="16" font-weight="700">服务后</text>
+      <text x="540" y="278" fill="#6B7280" font-size="13">生命体征 + 观察问卷</text>
+
+      <!-- Step 4: 系统处理 -->
+      <rect x="480" y="324" width="240" height="80" rx="12" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5"/>
+      <circle cx="508" cy="350" r="14" fill="#C68B3E"/>
+      <text x="508" y="355" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">4</text>
+      <text x="540" y="350" fill="#1F2937" font-size="16" font-weight="700">系统处理</text>
+      <text x="540" y="378" fill="#6B7280" font-size="13">基线比较 &middot; 趋势聚合 &middot; 识别例外</text>
+
+      <!-- Branch annotation for step 4 -->
+      <rect x="780" y="314" width="280" height="100" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+      <text x="800" y="342" fill="#065F46" font-size="14" font-weight="700">大部分情况</text>
+      <text x="800" y="364" fill="#6B7280" font-size="13">AI 自动处理，结果入档</text>
+      <text x="800" y="388" fill="#6B7280" font-size="13">生成护理提示和家属报告</text>
+      <line x1="720" y1="364" x2="776" y2="364" stroke="#10B981" stroke-width="2" marker-end="url(#a3)"/>
+
+      <!-- Step 5: 人工闭环 -->
+      <rect x="480" y="424" width="240" height="56" rx="12" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.5"/>
+      <circle cx="508" cy="452" r="14" fill="#EF4444"/>
+      <text x="508" y="457" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">5</text>
+      <text x="540" y="448" fill="#991B1B" font-size="16" font-weight="700">人工闭环</text>
+      <text x="668" y="448" fill="#6B7280" font-size="13">（少数例外）</text>
+
+      <!-- Branch annotation for step 5 -->
+      <rect x="780" y="424" width="280" height="56" rx="10" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
+      <text x="800" y="450" fill="#991B1B" font-size="14" font-weight="700">Red Flag</text>
+      <text x="870" y="450" fill="#6B7280" font-size="13">护士复核、行动、关单</text>
+      <line x1="720" y1="452" x2="776" y2="452" stroke="#EF4444" stroke-width="2" marker-end="url(#a4)"/>
+
+      <!-- Arrows: 档 → step 1 -->
+      <path d="M370 200 Q420 64, 476 64" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#a1)"/>
+
+      <!-- Arrows between steps -->
+      <line x1="600" y1="104" x2="600" y2="120" stroke="#9CA3AF" stroke-width="1.5"/>
+      <line x1="600" y1="204" x2="600" y2="220" stroke="#9CA3AF" stroke-width="1.5"/>
+      <line x1="600" y1="304" x2="600" y2="320" stroke="#9CA3AF" stroke-width="1.5"/>
+      <line x1="600" y1="404" x2="600" y2="420" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+      <!-- Return arrow: step 4 back to 档 -->
+      <path d="M480 380 Q400 420, 340 360" fill="none" stroke="#10B981" stroke-width="2.5" marker-end="url(#a3)"/>
+      <!-- Return arrow: step 5 back to 档 -->
+      <path d="M480 460 Q340 480, 280 370" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#a4)"/>
+
+      <!-- Labels on return arrows -->
+      <text x="380" y="408" fill="#10B981" font-size="11" font-weight="600">自动入档</text>
+      <text x="340" y="470" fill="#EF4444" font-size="11" font-weight="600">复核后入档</text>
+      <text x="408" y="140" fill="#3B82F6" font-size="11" font-weight="600">读取基线</text>
+    </svg>
   </div>
 </section>
 
