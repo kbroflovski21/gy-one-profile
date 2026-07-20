@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数字照护员 — 健康管理规则 Proposal</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#FAFBFC;color:#1A1A1A;line-height:1.8;padding:40px 20px}
+.doc{max-width:860px;margin:0 auto;background:#fff;border-radius:16px;border:1px solid #E2E8F0;padding:48px 56px;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+h1{font-size:26px;font-weight:800;color:#0F172A;margin-bottom:6px}
+.subtitle{font-size:15px;color:#64748B;margin-bottom:8px}
+.badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:12px;font-weight:600;background:#FEF3C7;color:#92400E;margin-bottom:32px}
+h2{font-size:20px;font-weight:700;color:#0F172A;margin:36px 0 16px;padding-bottom:8px;border-bottom:2px solid #E2E8F0}
+h3{font-size:16px;font-weight:700;color:#334155;margin:20px 0 10px}
+p{font-size:15px;color:#334155;margin-bottom:12px}
+ul{padding-left:24px;margin-bottom:16px}
+li{font-size:14px;color:#475569;margin-bottom:6px}
+li b{color:#0F172A}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+th{text-align:left;padding:10px 14px;background:#F8FAFC;border:1px solid #E2E8F0;font-weight:600;color:#64748B;font-size:12px}
+td{padding:10px 14px;border:1px solid #E2E8F0;color:#334155;vertical-align:top}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.tag-green{background:#DCFCE7;color:#166534}
+.tag-yellow{background:#FEF3C7;color:#92400E}
+.tag-red{background:#FEE2E2;color:#991B1B}
+.section-card{background:#F8FAFC;border-radius:12px;border:1px solid #E2E8F0;padding:20px 24px;margin:16px 0}
+.rule-row{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #F1F5F9}
+.rule-row:last-child{border-bottom:none}
+.rule-tag{flex-shrink:0;width:48px;text-align:center;padding-top:2px}
+.rule-desc{flex:1;font-size:14px;color:#334155}
+.note{background:#EFF6FF;border-left:4px solid #2563EB;padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;color:#1E40AF;line-height:1.7}
+.warn-note{background:#FFFBEB;border-left:4px solid #EAB308;padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;color:#92400E;line-height:1.7}
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #E2E8F0;font-size:13px;color:#94A3B8;display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="doc">
+
+<h1>数字照护员 — 健康管理规则 Proposal</h1>
+<div class="subtitle">金色年华 · 长护险标杆试点</div>
+<span class="badge">初稿 · 待护理专业人员确认和调整</span>
+
+<div class="note">本文档提出健康管理规则的初步建议，作为讨论的起点。所有规则需要护理专业人员评审、调整并最终确认。</div>
+
+<!-- ============================================ -->
+<h2>一、护理员观察问卷设计</h2>
+
+<h3>设计原则</h3>
+<ul>
+  <li>所有问题<b>默认"正常"</b>，一切正常时护理员无需逐个操作</li>
+  <li>每个问题只有<b>"正常 / 异常"两个选项</b>，降低认知负担</li>
+  <li>异常情况在最后的输入框中统一描述，支持语音输入</li>
+</ul>
+
+<h3>观察项目（12 项）</h3>
+<p>建议分为"必观察"和"按需观察"两组：</p>
+
+<table>
+  <thead><tr><th>分类</th><th>观察项</th><th>说明</th></tr></thead>
+  <tbody>
+    <tr><td rowspan="5" style="font-weight:600;color:#0F172A;background:#F0FDF4;">必观察<br><span style="font-size:11px;color:#64748B;font-weight:400">每次服务必看</span></td>
+      <td><b>意识状态</b></td><td>是否清醒、有无嗜睡/昏迷</td></tr>
+    <tr><td><b>饮食饮水</b></td><td>进食量、饮水量相比平时</td></tr>
+    <tr><td><b>皮肤/水肿</b></td><td>有无红斑、水肿、破损</td></tr>
+    <tr><td><b>移动能力</b></td><td>行走、转移是否有变化</td></tr>
+    <tr><td><b>疼痛反馈</b></td><td>有无疼痛主诉</td></tr>
+    <tr><td rowspan="7" style="font-weight:600;color:#0F172A;">按需观察<br><span style="font-size:11px;color:#64748B;font-weight:400">有变化才选异常</span></td>
+      <td>行为表现</td><td>有无烦躁、异常行为</td></tr>
+    <tr><td>呼吸状况</td><td>是否平稳、有无异常</td></tr>
+    <tr><td>吞咽功能</td><td>进食时有无呛咳</td></tr>
+    <tr><td>排尿情况</td><td>频次、量是否正常</td></tr>
+    <tr><td>排便情况</td><td>频次、性状是否正常</td></tr>
+    <tr><td>用药情况</td><td>是否按时用药</td></tr>
+    <tr><td>睡眠/情绪</td><td>睡眠质量、情绪状态</td></tr>
+  </tbody>
+</table>
+
+<h3>生命体征（如有测量）</h3>
+<table>
+  <thead><tr><th>项目</th><th>单位</th><th>说明</th></tr></thead>
+  <tbody>
+    <tr><td><b>血压</b></td><td>mmHg (收缩压/舒张压)</td><td>如有血压计则测量</td></tr>
+    <tr><td><b>体温</b></td><td>°C</td><td>如有体温计则测量</td></tr>
+    <tr><td><b>体重</b></td><td>kg</td><td>如有体重秤则测量（建议每周至少一次）</td></tr>
+  </tbody>
+</table>
+
+<div class="warn-note"><b>待确认：</b>以上 12 项是否完整？是否有遗漏的关键观察项？"必观察"和"按需观察"的分组是否合理？</div>
+
+<!-- ============================================ -->
+<h2>二、事件分级规则</h2>
+
+<p>每次有新数据进入系统（护理员提交观察 或 护士更新评估），AI 基于健康基线自动分析，产生一个事件并判定等级。</p>
+
+<div class="section-card">
+<h3 style="margin-top:0"><span class="tag tag-green">绿色</span> 正常 — 自动归档，无需人工介入</h3>
+<div class="rule-row"><div class="rule-desc">所有观察项均为"正常"</div></div>
+<div class="rule-row"><div class="rule-desc">生命体征在基线范围内（血压波动 ±15mmHg，体温 36.0~37.3°C）</div></div>
+<div class="rule-row"><div class="rule-desc">无评估分数异常变化</div></div>
+</div>
+
+<div class="section-card" style="border-color:#FDE68A;">
+<h3 style="margin-top:0"><span class="tag tag-yellow">黄色</span> 预警 — 护士复核</h3>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-yellow">观察</span></div><div class="rule-desc">任意 <b>1 项</b>观察标记为"异常"（意识异常除外，见红色）</div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-yellow">血压</span></div><div class="rule-desc">收缩压 <b>≥160</b> 或 <b>≤90</b> mmHg</div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-yellow">体温</span></div><div class="rule-desc">体温 <b>≥37.5°C</b> 或 <b>≤35.5°C</b></div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-yellow">体重</span></div><div class="rule-desc">单月体重下降 <b>≥2kg</b></div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-yellow">评估</span></div><div class="rule-desc">Barthel 单次下降 <b>≥10 分</b>，或 Braden 单次下降 <b>≥2 分</b></div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-yellow">签约</span></div><div class="rule-desc">初始签约评估中存在中度以上风险指标</div></div>
+</div>
+
+<div class="section-card" style="border-color:#FECACA;">
+<h3 style="margin-top:0"><span class="tag tag-red">红色</span> 紧急 — 护士立即复核</h3>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-red">观察</span></div><div class="rule-desc">≥<b>2 项</b>观察同时标记为"异常"</div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-red">意识</span></div><div class="rule-desc"><b>意识异常</b>（此项单独即为红色，不论其他项）</div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-red">血压</span></div><div class="rule-desc">收缩压 <b>≥180</b> 或 <b>≤80</b> mmHg</div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-red">体温</span></div><div class="rule-desc">体温 <b>≥39°C</b> 或 <b>≤35°C</b></div></div>
+<div class="rule-row"><div class="rule-tag"><span class="tag tag-red">评估</span></div><div class="rule-desc">Barthel <b>≤20</b>（完全依赖新发），或 Braden <b>≤9</b>（极高危）</div></div>
+</div>
+
+<div class="warn-note"><b>待确认：</b>以上阈值是否合理？是否有需要新增或调整的触发条件？"意识异常"直接判红是否合适？</div>
+
+<!-- ============================================ -->
+<h2>三、健康基线更新规则</h2>
+
+<p>健康基线是系统对每位长者"稳定状态"的理解，是所有 AI 分析的参照。基线需要随情况变化而更新，但不能过于频繁。</p>
+
+<h3>触发基线更新的条件</h3>
+<table>
+  <thead><tr><th>触发场景</th><th>说明</th></tr></thead>
+  <tbody>
+    <tr><td><b>护士提交新评估</b></td><td>评估档案更新时，基线同步更新</td></tr>
+    <tr><td><b>连续 3 次同一项异常</b></td><td>趋势确认：该异常可能已成为新的"常态"，需纳入基线</td></tr>
+    <tr><td><b>生命体征均值偏离 ≥10%</b></td><td>血压/体温/体重的滚动均值与基线差异超过 10%</td></tr>
+    <tr><td><b>红色事件复核后</b></td><td>护士复核时确认需要调整基线</td></tr>
+  </tbody>
+</table>
+
+<h3>不触发更新的条件</h3>
+<table>
+  <thead><tr><th>场景</th><th>说明</th></tr></thead>
+  <tbody>
+    <tr><td>单次异常</td><td>可能是偶发，不改变基线</td></tr>
+    <tr><td>绿色事件</td><td>一切正常，无需调整</td></tr>
+    <tr><td>体征正常波动</td><td>在基线范围内的波动不算偏离</td></tr>
+  </tbody>
+</table>
+
+<div class="warn-note"><b>待确认：</b>"连续 3 次"是否合理？是否应该区分不同指标用不同次数？生命体征偏离 10% 的阈值是否合适？</div>
+
+<!-- ============================================ -->
+<h2>四、初始签约评估的事件触发</h2>
+
+<p>护士在首次签约时填写的评估档案，也需要生成事件以确保护士了解长者的基础状况。</p>
+
+<div class="section-card">
+<h3 style="margin-top:0">规则</h3>
+<div class="rule-row"><div class="rule-desc">签约评估数据录入后，系统自动分析风险等级并生成事件</div></div>
+<div class="rule-row"><div class="rule-desc">如有中度以上风险指标（Barthel ≤70、Braden ≤16、跌倒 ≥20、居家安全 ≥2 项），生成<span class="tag tag-yellow">黄色</span>事件</div></div>
+<div class="rule-row"><div class="rule-desc">如有高度风险（Barthel ≤45、Braden ≤12、跌倒 >35），生成<span class="tag tag-red">红色</span>事件</div></div>
+<div class="rule-row"><div class="rule-desc">护士复核后，该评估数据成为健康基线 v1，<b>同一评估不再重复触发</b></div></div>
+</div>
+
+<!-- ============================================ -->
+<h2>五、总结</h2>
+
+<table>
+  <thead><tr><th>模块</th><th>状态</th><th>需要确认</th></tr></thead>
+  <tbody>
+    <tr><td>观察问卷（12项）</td><td>已设计，默认正常 + 正常/异常两选</td><td>项目是否完整，分组是否合理</td></tr>
+    <tr><td>事件分级（绿/黄/红）</td><td>已定义量化阈值</td><td>阈值是否合理，是否有遗漏场景</td></tr>
+    <tr><td>基线更新规则</td><td>已定义触发条件</td><td>次数和偏离度是否合适</td></tr>
+    <tr><td>签约评估触发</td><td>已定义</td><td>风险阈值是否匹配临床实践</td></tr>
+  </tbody>
+</table>
+
+<div class="note">以上规则为技术团队基于产品逻辑的初步建议。最终规则需要由护理专业人员（护士长/护理主管）根据临床经验确认和调整，确保每一条规则都符合实际护理场景和安全要求。</div>
+
+<div class="footer">
+  <span>金色年华 · 数字照护员项目</span>
+  <span>2026年7月</span>
+</div>
+
+</div>
+</body>
+</html>
