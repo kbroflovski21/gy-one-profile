@@ -485,8 +485,8 @@ p, li { font-size: 17px; line-height: 1.7; color: var(--gray-700); }
     <!-- 一人一档 -->
     <div style="width:420px; display:flex; flex-direction:column; align-items:center; text-align:center;">
       <div style="padding:32px 36px; border-radius:16px; border:2.5px solid var(--gold); background:linear-gradient(135deg, #FFFBF5, #FFF5E6); width:420px; height:160px; display:flex; flex-direction:column; justify-content:center; box-shadow: 0 4px 20px rgba(198,139,62,0.12);">
-        <div style="font-size:24px; font-weight:700; color:var(--gray-900); margin-bottom:16px;">一人一档</div>
-        <p style="font-size:17px; line-height:1.9; color:var(--gray-600);">通过建立<b style="color:var(--gray-900);">参保人</b>个性化的全周期健康档案</p>
+        <div style="font-size:22px; font-weight:700; color:var(--gray-900); margin-bottom:16px;">数字照护员（一人一档+AI辅助健康管理）</div>
+        <p style="font-size:15px; line-height:1.9; color:var(--gray-600);">通过建立<b style="color:var(--gray-900);">参保人</b>个性化的全周期健康档案并结合AI分析提示风险与照护建议</p>
       </div>
       <div style="margin:16px 0;">
         <svg width="24" height="40" viewBox="0 0 24 40"><path d="M12 0 L12 32 M4 24 L12 34 L20 24" fill="none" stroke="#C68B3E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -499,298 +499,203 @@ p, li { font-size: 17px; line-height: 1.7; color: var(--gray-700); }
   </div>
 </section>
 
-<!-- ==================== SLIDE 3: What's in the profile ==================== -->
-<section class="slide" id="s3">
-  <div class="slide-label">档案内容</div>
-  <h2>「一人一档」的"档"包含哪些？</h2>
+<!-- ==================== SLIDE 3 (NEW): 什么是"档" ==================== -->
+<section class="slide" id="s3new" style="justify-content:center;">
+  <div class="slide-label">档案概述</div>
+  <h2 style="text-align:center; margin-bottom:40px;">什么是"档"？包含哪些？</h2>
 
-  <div class="profile-layers">
-    <div class="layer-card">
-      <div class="layer-num">1</div>
-      <h4>基本信息</h4>
-      <div class="layer-fields">姓名、年龄、性别、身份证号、住址、联系方式、紧急联系人、居住情况（独居/子女/配偶）、身高体重</div>
+  <div style="max-width:1000px; margin:0 auto; display:flex; flex-direction:column; gap:20px;">
+    <!-- 两个来源卡片 -->
+    <div style="display:flex; gap:24px; justify-content:center;">
+      <div style="flex:1; background:#fff; border-radius:16px; border:2.5px solid var(--gold); padding:24px; text-align:center; box-shadow: 0 4px 16px rgba(198,139,62,0.10);">
+        <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg, #C68B3E, #A06A1E); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700; margin:0 auto 12px;">1</div>
+        <h4 style="font-size:18px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">健康评估档案（护士）</h4>
+        <p style="font-size:14px; color:var(--gray-500); line-height:1.5;">签约时初次评估 + 后续定期更新评估</p>
+        <!-- 具体内容 -->
+        <div style="margin-top:14px; text-align:left; background:#FAFBFC; border-radius:10px; padding:14px 16px; font-size:13px; color:var(--gray-600); line-height:2;">
+          <div>• <b style="color:var(--gray-900);">基本信息表</b> — 姓名、身份证、住址、居住情况、慢性疾病、意识、血压/体温/脉搏/呼吸、四肢活动、压疮、自理能力</div>
+          <div>• <b style="color:var(--gray-900);">Barthel ADL 量表</b> — 10项日常生活能力评分（进餐、洗澡、穿衣、转移等）</div>
+          <div>• <b style="color:var(--gray-900);">Braden 压疮评估</b> — 6项压疮风险评分（感觉、湿度、活动性、营养等）</div>
+          <div>• <b style="color:var(--gray-900);">跌倒风险评估</b> — 6项跌倒风险评分（跌倒历史、步态、药物等）</div>
+          <div>• <b style="color:var(--gray-900);">居家安全评估</b> — 环境风险（8项）、医疗风险（3项）、生活习惯风险（7项）</div>
+          <div>• <b style="color:var(--gray-900);">护理服务计划</b> — 服务项目、频次、时长、起止时间</div>
+        </div>
+      </div>
+      <div style="flex:1; background:#fff; border-radius:16px; border:2.5px solid var(--gold); padding:24px; text-align:center; box-shadow: 0 4px 16px rgba(198,139,62,0.10);">
+        <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg, #C68B3E, #A06A1E); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:700; margin:0 auto 12px;">2</div>
+        <h4 style="font-size:18px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">每次服务上报的信息和数据（护理员）</h4>
+        <p style="font-size:14px; color:var(--gray-500); line-height:1.5;">每次上门服务后提交</p>
+        <!-- 具体内容 -->
+        <div style="margin-top:14px; text-align:left; background:#FAFBFC; border-radius:10px; padding:14px 16px; font-size:13px; color:var(--gray-600); line-height:2;">
+          <div>• <b style="color:#2563EB;">精神与呼吸观察</b> — 意识、行为、呼吸（正常/关注/异常）</div>
+          <div>• <b style="color:#2563EB;">进食与排泄观察</b> — 饮食饮水、吞咽、排尿、排便（正常/变化/异常）</div>
+          <div>• <b style="color:#2563EB;">功能与照护风险</b> — 移动、疼痛、皮肤/水肿、用药、睡眠情绪</div>
+          <div>• <b style="color:var(--gray-900);">生命体征</b> — 血压(mmHg)、体温(°C)、体重(kg)</div>
+          <div>• <b style="color:var(--gray-900);">服务执行记录</b> — 服务项目、时间、时长、六维证据链</div>
+          <div>• <b style="color:#2563EB;">备注</b> — 护理员的补充说明</div>
+        </div>
+      </div>
     </div>
-    <div class="layer-card">
-      <div class="layer-num">2</div>
-      <h4>基本健康与风险评估</h4>
-      <div class="layer-fields">慢性疾病、失能等级、Barthel ADL 评分（日常生活能力）、Braden 压疮风险评分、跌倒风险评分、居家安全风险评估、护理服务计划</div>
-    </div>
-    <div class="layer-card">
-      <div class="layer-num">3</div>
-      <h4>动态健康数据</h4>
-      <div class="layer-fields">每次上门采集的生命体征（血压、脉搏、体温、呼吸）、皮肤观察、进食情况、睡眠质量、情绪与意识、排泄情况</div>
-    </div>
-    <div class="layer-card">
-      <div class="layer-num">4</div>
-      <h4>护理记录与数据</h4>
-      <div class="layer-fields">服务项目执行记录、护理计划版本变更、异常事件记录（发生-处理-结果）、护士复核意见、护理指导与家属建议</div>
-    </div>
-  </div>
 
-  <div class="profile-footer">
-    贯穿参保人在金色年华接受服务的 <span>全周期信息</span> 和 <span>个性化信息</span>
+    <!-- 总结 -->
+    <div style="background:linear-gradient(135deg, #FFFBF5, #FFF5E6); border:2.5px solid var(--gold); border-radius:16px; padding:22px 40px; text-align:center; box-shadow: 0 4px 20px rgba(198,139,62,0.12);">
+      <p style="font-size:18px; line-height:1.8; color:var(--gray-700);">「档」是贯穿参保人在金色年华接受服务的 <span style="color:var(--gold-dark); font-weight:700; font-size:20px;">全周期信息</span> 和 <span style="color:var(--gold-dark); font-weight:700; font-size:20px;">个性化信息</span></p>
+    </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 3B: What is "档" really ==================== -->
-<section class="slide" id="s3b" style="justify-content:center;">
-  <div class="slide-label">档案理念</div>
-  <h2>"档"不只是一张表，而是一条健康管理链</h2>
-  <p class="subtitle">每个参保人的档案，记录的不只是"有哪些数据"，而是数据之间的因果关系：<br>他原来什么状况 → 我们做了什么 → 发生了什么变化 → 谁来判断 → 下一步怎么办。</p>
+<!-- ==================== SLIDE 4 (NEW): 从一人一档到健康管理 ==================== -->
+<section class="slide" id="s4new" style="justify-content:center;">
+  <div class="slide-label">健康管理闭环</div>
+  <h2 style="text-align:center; margin-bottom:36px;">从"一人一档"到"健康管理"</h2>
 
-  <div style="display:flex; align-items:center; justify-content:center; gap:0; margin-top:36px; flex-wrap:nowrap;">
+  <svg viewBox="0 0 920 420" style="max-width:920px; width:100%; margin:0 auto; display:block;">
+    <defs>
+      <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFBF5"/><stop offset="100%" stop-color="#FFF0D6"/></linearGradient>
+      <marker id="arrowGold" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0, 10 4, 0 8" fill="#C68B3E"/></marker>
+      <marker id="arrowGray" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0, 10 4, 0 8" fill="#94A3B8"/></marker>
+    </defs>
 
-    <div style="width:150px; text-align:center;">
-      <div style="width:40px; height:40px; border-radius:50%; background:#3B82F6; color:#fff; font-size:15px; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">1</div>
-      <div style="font-size:16px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">健康基线</div>
-      <div style="font-size:13px; color:var(--gray-500); line-height:1.5;">这个人原来怎样<br>主要风险是什么</div>
-    </div>
+    <!-- 左侧大圆 -->
+    <circle cx="150" cy="210" r="120" fill="url(#gGold)" stroke="#C68B3E" stroke-width="3"/>
+    <text x="150" y="185" text-anchor="middle" font-size="56" font-weight="800" fill="#1A1A1A">档</text>
+    <text x="150" y="220" text-anchor="middle" font-size="14" fill="#8B7355">个人健康基线</text>
+    <text x="150" y="242" text-anchor="middle" font-size="14" fill="#8B7355">护理计划 · 全周期记录</text>
 
-    <div style="color:var(--gray-300); font-size:20px; margin:0 4px;">&rarr;</div>
+    <!-- 从大圆到步骤1的箭头 -->
+    <line x1="270" y1="140" x2="370" y2="85" stroke="#C68B3E" stroke-width="3" marker-end="url(#arrowGold)"/>
 
-    <div style="width:150px; text-align:center;">
-      <div style="width:40px; height:40px; border-radius:50%; background:#F59E0B; color:#fff; font-size:15px; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">2</div>
-      <div style="font-size:16px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">护理计划</div>
-      <div style="font-size:13px; color:var(--gray-500); line-height:1.5;">应该做什么<br>重点观察什么</div>
-    </div>
+    <!-- 步骤1: 健康基线 -->
+    <rect x="380" y="40" width="500" height="90" rx="14" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <circle cx="415" cy="72" r="16" fill="#2563EB"/>
+    <text x="415" y="77" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">1</text>
+    <text x="445" y="72" font-size="18" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">健康基线</text>
+    <text x="415" y="105" font-size="13" fill="#64748B">基于当下所有信息，这个人的整体状况和稳定状态是什么？</text>
 
-    <div style="color:var(--gray-300); font-size:20px; margin:0 4px;">&rarr;</div>
+    <!-- 步骤1到2箭头 -->
+    <line x1="630" y1="130" x2="630" y2="155" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowGray)"/>
 
-    <div style="width:150px; text-align:center;">
-      <div style="width:40px; height:40px; border-radius:50%; background:#6B7280; color:#fff; font-size:15px; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">3</div>
-      <div style="font-size:16px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">服务执行</div>
-      <div style="font-size:13px; color:var(--gray-500); line-height:1.5;">实际做了什么<br>现场看见什么</div>
-    </div>
+    <!-- 步骤2: 事件 -->
+    <rect x="380" y="160" width="500" height="90" rx="14" fill="#FFFBF5" stroke="#E8D5B5" stroke-width="1.5"/>
+    <circle cx="415" cy="192" r="16" fill="#C68B3E"/>
+    <text x="415" y="197" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">2</text>
+    <text x="445" y="192" font-size="18" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">事件</text>
+    <text x="415" y="225" font-size="13" fill="#64748B">每次有新信息/数据进入系统，AI 基于基线做分析 — 正常自动归档，异常则预警</text>
 
-    <div style="color:var(--gold); font-size:20px; margin:0 4px;">&rarr;</div>
+    <!-- 步骤2到3箭头 -->
+    <line x1="630" y1="250" x2="630" y2="275" stroke="#94A3B8" stroke-width="3" marker-end="url(#arrowGray)"/>
 
-    <div style="width:150px; text-align:center;">
-      <div style="width:40px; height:40px; border-radius:50%; background:var(--gold); color:#fff; font-size:15px; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">4</div>
-      <div style="font-size:16px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">变化与事件</div>
-      <div style="font-size:13px; color:var(--gray-500); line-height:1.5;">哪里发生了变化<br>是否需要关注</div>
-    </div>
+    <!-- 步骤3: 决策反应更新 -->
+    <rect x="380" y="280" width="500" height="90" rx="14" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+    <circle cx="415" cy="312" r="16" fill="#16A34A"/>
+    <text x="415" y="317" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">3</text>
+    <text x="445" y="312" font-size="18" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">决策、反应与更新</text>
+    <text x="415" y="345" font-size="13" fill="#64748B">AI 辅助给出决策建议，护士复核（如有必要），做出反应并更新结果</text>
 
-    <div style="color:var(--gold); font-size:20px; margin:0 4px;">&rarr;</div>
-
-    <div style="width:150px; text-align:center;">
-      <div style="width:40px; height:40px; border-radius:50%; background:#8B5CF6; color:#fff; font-size:15px; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">5</div>
-      <div style="font-size:16px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">专业判断</div>
-      <div style="font-size:13px; color:var(--gray-500); line-height:1.5;">护士怎么判断<br>采取什么行动</div>
-    </div>
-
-    <div style="color:var(--gold); font-size:20px; margin:0 4px;">&rarr;</div>
-
-    <div style="width:150px; text-align:center;">
-      <div style="width:40px; height:40px; border-radius:50%; background:#10B981; color:#fff; font-size:15px; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">6</div>
-      <div style="font-size:16px; font-weight:700; color:var(--gray-900); margin-bottom:6px;">结果与更新</div>
-      <div style="font-size:13px; color:var(--gray-500); line-height:1.5;">处理是否有效<br>基线和计划是否更新</div>
-    </div>
-
-  </div>
-
-  <div style="margin-top:36px; padding:16px 24px; background:var(--gray-50); border-radius:10px; text-align:center;">
-    <p style="font-size:15px; color:var(--gray-600);">现有纸质档案对 <b>①②③</b> 覆盖较好，<b>④</b> 只有零散记录，<b>⑤⑥ 最弱</b>。这正是我们需要补齐的产品能力。</p>
-  </div>
+    <!-- 从步骤3回到大圆的曲线箭头 -->
+    <path d="M 380 350 C 300 400, 200 390, 175 330" fill="none" stroke="#C68B3E" stroke-width="3" marker-end="url(#arrowGold)"/>
+    <text x="275" y="398" text-anchor="middle" font-size="14" font-weight="700" fill="#C68B3E">更新入档</text>
+  </svg>
 </section>
 
-<!-- ==================== SLIDE 3C: Existing vs Missing ==================== -->
-<section class="slide" id="s3c" style="justify-content:center;">
-  <div class="slide-label">档案理念</div>
-  <h2>现有档案已经有输入，缺的是数据之间的关系</h2>
-  <p class="subtitle">问题不在"有没有表"，而在"能不能基于数据做出判断并形成行动"。</p>
+<!-- ==================== SLIDE 5 (NEW): 服务过程前后的体现 ==================== -->
+<section class="slide" id="s5new" style="justify-content:center;">
+  <div class="slide-label">服务流程</div>
+  <h2 style="text-align:center; margin-bottom:32px;">健康管理在具体服务过程前后的体现</h2>
 
-  <div style="display:flex; gap:32px; margin-top:32px; justify-content:center; max-width:960px; margin-left:auto; margin-right:auto;">
+  <svg viewBox="0 0 1050 460" style="max-width:1000px; width:100%; margin:0 auto; display:block;">
+    <defs>
+      <linearGradient id="gGold2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#FFFBF5"/><stop offset="100%" stop-color="#FFF0D6"/></linearGradient>
+      <marker id="aBlue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#2563EB"/></marker>
+      <marker id="aGray" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#94A3B8"/></marker>
+      <marker id="aGreen" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#16A34A"/></marker>
+      <marker id="aRed" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#DC2626"/></marker>
+      <marker id="aGold2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#C68B3E"/></marker>
+    </defs>
 
-    <div style="flex:1; padding:28px 32px; border-radius:14px; border:1.5px solid #BFDBFE; background:#F8FBFF;">
-      <div style="display:inline-block; padding:3px 12px; border-radius:6px; background:#DBEAFE; color:#1E40AF; font-size:13px; font-weight:600; margin-bottom:16px;">已经存在</div>
-      <h3 style="margin-bottom:16px;">纸档案与现有系统</h3>
-      <ul class="bullet-list">
-        <li>基本信息、资格等级、知情同意与联系人</li>
-        <li>Barthel、Braden、跌倒和居家安全评估</li>
-        <li>护理服务计划、项目、频次和注意事项</li>
-        <li>每次服务内容、时长、血压/脉搏与签字</li>
-        <li>异常情况、投诉、回访和质量留痕</li>
-      </ul>
-    </div>
+    <!-- 左侧大圆: 档 -->
+    <circle cx="140" cy="210" r="110" fill="url(#gGold2)" stroke="#C68B3E" stroke-width="3"/>
+    <text x="140" y="185" text-anchor="middle" font-size="48" font-weight="800" fill="#1A1A1A">档</text>
+    <text x="140" y="218" text-anchor="middle" font-size="13" fill="#8B7355">个人健康基线</text>
+    <text x="140" y="238" text-anchor="middle" font-size="13" fill="#8B7355">护理计划 · 全周期记录</text>
 
-    <div style="flex:1; padding:28px 32px; border-radius:14px; border:2px solid var(--gold); background:linear-gradient(135deg, #FFFBF5, #FFF5E6);">
-      <div style="display:inline-block; padding:3px 12px; border-radius:6px; background:#FEF3C7; color:#92400E; font-size:13px; font-weight:600; margin-bottom:16px;">真正缺少</div>
-      <h3 style="margin-bottom:16px;">健康管理关系链</h3>
-      <ul class="bullet-list" style="list-style:none;">
-        <li style="padding-left:0;"><b style="color:var(--gold-dark);">基线</b> &mdash; 这个人的稳定状态是什么</li>
-        <li style="padding-left:0;"><b style="color:var(--gold-dark);">变化</b> &mdash; 本次记录相对本人发生了什么偏离</li>
-        <li style="padding-left:0;"><b style="color:var(--gold-dark);">任务</b> &mdash; 谁在什么时限内核实和处理</li>
-        <li style="padding-left:0;"><b style="color:var(--gold-dark);">结果</b> &mdash; 介入是否有效、是否需要升级</li>
-        <li style="padding-left:0;"><b style="color:var(--gold-dark);">学习</b> &mdash; 护理计划和个人基线是否更新</li>
-      </ul>
-    </div>
+    <!-- 从大圆到步骤1: 蓝色箭头 + 读取基线 -->
+    <path d="M 230 140 C 290 90, 340 55, 400 50" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#aBlue)"/>
+    <text x="305" y="78" text-anchor="middle" font-size="12" font-weight="600" fill="#2563EB">读取基线</text>
 
-  </div>
+    <!-- 步骤1: 服务前 -->
+    <rect x="410" y="20" width="270" height="62" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <circle cx="436" cy="42" r="13" fill="#2563EB"/>
+    <text x="436" y="47" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">1</text>
+    <text x="460" y="42" font-size="16" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">服务前</text>
+    <text x="436" y="66" font-size="12" fill="#64748B">AI 展示个性化注意事项</text>
 
-  <div style="margin-top:28px; padding:16px 24px; background:linear-gradient(135deg, #FFFBF5, #FFF8EE); border:1.5px solid var(--gold); border-radius:10px; text-align:center;">
-    <p style="font-size:16px; color:var(--gold-dark); font-weight:600;">「一人一档」不是把纸表搬到线上，而是把分散的记录接成一条可运行的健康管理链。</p>
-  </div>
+    <!-- 步骤1→2 -->
+    <line x1="545" y1="82" x2="545" y2="100" stroke="#94A3B8" stroke-width="2.5" marker-end="url(#aGray)"/>
+
+    <!-- 步骤2: 服务中 -->
+    <rect x="410" y="105" width="270" height="62" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <circle cx="436" cy="127" r="13" fill="#2563EB"/>
+    <text x="436" y="132" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">2</text>
+    <text x="460" y="127" font-size="16" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">服务中</text>
+    <text x="436" y="151" font-size="12" fill="#64748B">护理员按计划执行</text>
+
+    <!-- 步骤2→3 -->
+    <line x1="545" y1="167" x2="545" y2="185" stroke="#94A3B8" stroke-width="2.5" marker-end="url(#aGray)"/>
+
+    <!-- 步骤3: 服务后 -->
+    <rect x="410" y="190" width="270" height="62" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <circle cx="436" cy="212" r="13" fill="#2563EB"/>
+    <text x="436" y="217" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">3</text>
+    <text x="460" y="212" font-size="16" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">服务后</text>
+    <text x="436" y="236" font-size="12" fill="#64748B">生命体征 + 观察问卷</text>
+
+    <!-- 步骤3→4 -->
+    <line x1="545" y1="252" x2="545" y2="270" stroke="#94A3B8" stroke-width="2.5" marker-end="url(#aGray)"/>
+
+    <!-- 步骤4: 系统处理 -->
+    <rect x="410" y="275" width="270" height="62" rx="10" fill="#FFFBF5" stroke="#E8D5B5" stroke-width="1.5"/>
+    <circle cx="436" cy="297" r="13" fill="#C68B3E"/>
+    <text x="436" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">4</text>
+    <text x="460" y="297" font-size="16" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">系统处理</text>
+    <text x="436" y="321" font-size="12" fill="#64748B">基线比较 · 趋势聚合 · 识别例外</text>
+
+    <!-- 步骤4→右侧: 大部分情况 -->
+    <line x1="680" y1="300" x2="740" y2="300" stroke="#16A34A" stroke-width="2.5" marker-end="url(#aGreen)"/>
+
+    <!-- 大部分情况卡片 -->
+    <rect x="750" y="275" width="260" height="62" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+    <text x="770" y="298" font-size="15" font-weight="700" fill="#16A34A">大部分情况</text>
+    <text x="770" y="318" font-size="12" fill="#64748B">AI 自动处理，结果入档，生成护理提示</text>
+
+    <!-- 步骤4→步骤5 虚线 -->
+    <line x1="545" y1="337" x2="545" y2="355" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+    <!-- 步骤5: 人工闭环 -->
+    <rect x="410" y="360" width="270" height="48" rx="10" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.5"/>
+    <circle cx="436" cy="384" r="13" fill="#DC2626"/>
+    <text x="436" y="389" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">5</text>
+    <text x="460" y="384" font-size="16" font-weight="700" fill="#1A1A1A" dominant-baseline="middle">人工闭环</text>
+    <text x="615" y="384" font-size="11" fill="#94A3B8" dominant-baseline="middle">(少数例外)</text>
+
+    <!-- 步骤5→右侧: Red Flag -->
+    <line x1="680" y1="384" x2="740" y2="384" stroke="#DC2626" stroke-width="2.5" marker-end="url(#aRed)"/>
+
+    <!-- Red Flag 卡片 -->
+    <rect x="750" y="360" width="260" height="48" rx="10" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.5"/>
+    <text x="770" y="382" font-size="14" font-weight="800" fill="#DC2626">Red Flag</text>
+    <text x="856" y="382" font-size="12" fill="#64748B" dominant-baseline="middle">护士复核、行动、关单</text>
+
+    <!-- 自动入档: 绿色曲线回到大圆 -->
+    <path d="M 750 320 C 620 370, 340 360, 215 300" fill="none" stroke="#16A34A" stroke-width="2.5" marker-end="url(#aGreen)"/>
+    <text x="440" y="370" text-anchor="middle" font-size="11" font-weight="600" fill="#16A34A">自动入档</text>
+
+    <!-- 复核后入档: 红色虚线回到大圆 -->
+    <path d="M 750 400 C 580 440, 300 430, 195 320" fill="none" stroke="#DC2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#aRed)"/>
+    <text x="420" y="440" text-anchor="middle" font-size="11" font-weight="600" fill="#DC2626">复核后入档</text>
+  </svg>
 </section>
 
-<!-- ==================== SLIDE 4: Service Flow ==================== -->
-<section class="slide" id="s4" style="padding: 40px 56px 36px;">
-  <div class="slide-label">业务模型</div>
-  <h2>以"档"为中心的健康管理闭环</h2>
-
-  <div style="flex:1; display:flex; align-items:center; justify-content:center;">
-    <svg viewBox="0 0 1100 480" style="width:100%; max-width:1100px; height:auto;" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <marker id="a1" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/>
-        </marker>
-        <marker id="a2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#C68B3E" stroke-width="1.5" stroke-linejoin="round"/>
-        </marker>
-        <marker id="a3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#10B981" stroke-width="1.5" stroke-linejoin="round"/>
-        </marker>
-        <marker id="a4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-          <path d="M0,0 L8,3 L0,6" fill="none" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round"/>
-        </marker>
-      </defs>
-
-      <!-- Center circle: 档 -->
-      <circle cx="240" cy="240" r="130" fill="url(#cgrad)" stroke="#C68B3E" stroke-width="3"/>
-      <defs>
-        <radialGradient id="cgrad" cx="50%" cy="40%"><stop offset="0%" stop-color="#FFFBF5"/><stop offset="100%" stop-color="#FFF0DB"/></radialGradient>
-      </defs>
-      <text x="240" y="215" text-anchor="middle" fill="#7C4D12" font-size="40" font-weight="800">档</text>
-      <text x="240" y="248" text-anchor="middle" fill="#A0764A" font-size="15">个人健康基线</text>
-      <text x="240" y="270" text-anchor="middle" fill="#A0764A" font-size="15">护理计划 &middot; 全周期记录</text>
-
-      <!-- Step 1: 服务前 -->
-      <rect x="480" y="24" width="240" height="80" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
-      <circle cx="508" cy="50" r="14" fill="#3B82F6"/>
-      <text x="508" y="55" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">1</text>
-      <text x="540" y="50" fill="#1F2937" font-size="16" font-weight="700">服务前</text>
-      <text x="540" y="78" fill="#6B7280" font-size="13">AI 展示个性化注意事项</text>
-
-      <!-- Step 2: 服务中 -->
-      <rect x="480" y="124" width="240" height="80" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
-      <circle cx="508" cy="150" r="14" fill="#3B82F6"/>
-      <text x="508" y="155" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">2</text>
-      <text x="540" y="150" fill="#1F2937" font-size="16" font-weight="700">服务中</text>
-      <text x="540" y="178" fill="#6B7280" font-size="13">护理员按计划执行</text>
-
-      <!-- Step 3: 服务后 -->
-      <rect x="480" y="224" width="240" height="80" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
-      <circle cx="508" cy="250" r="14" fill="#3B82F6"/>
-      <text x="508" y="255" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">3</text>
-      <text x="540" y="250" fill="#1F2937" font-size="16" font-weight="700">服务后</text>
-      <text x="540" y="278" fill="#6B7280" font-size="13">生命体征 + 观察问卷</text>
-
-      <!-- Step 4: 系统处理 -->
-      <rect x="480" y="324" width="240" height="80" rx="12" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5"/>
-      <circle cx="508" cy="350" r="14" fill="#C68B3E"/>
-      <text x="508" y="355" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">4</text>
-      <text x="540" y="350" fill="#1F2937" font-size="16" font-weight="700">系统处理</text>
-      <text x="540" y="378" fill="#6B7280" font-size="13">基线比较 &middot; 趋势聚合 &middot; 识别例外</text>
-
-      <!-- Branch annotation for step 4 -->
-      <rect x="780" y="314" width="280" height="100" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
-      <text x="800" y="342" fill="#065F46" font-size="14" font-weight="700">大部分情况</text>
-      <text x="800" y="364" fill="#6B7280" font-size="13">AI 自动处理，结果入档</text>
-      <text x="800" y="388" fill="#6B7280" font-size="13">生成护理提示和家属报告</text>
-      <line x1="720" y1="364" x2="776" y2="364" stroke="#10B981" stroke-width="2" marker-end="url(#a3)"/>
-
-      <!-- Step 5: 人工闭环 -->
-      <rect x="480" y="424" width="240" height="56" rx="12" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.5"/>
-      <circle cx="508" cy="452" r="14" fill="#EF4444"/>
-      <text x="508" y="457" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">5</text>
-      <text x="540" y="448" fill="#991B1B" font-size="16" font-weight="700">人工闭环</text>
-      <text x="668" y="448" fill="#6B7280" font-size="13">（少数例外）</text>
-
-      <!-- Branch annotation for step 5 -->
-      <rect x="780" y="424" width="280" height="56" rx="10" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
-      <text x="800" y="450" fill="#991B1B" font-size="14" font-weight="700">Red Flag</text>
-      <text x="870" y="450" fill="#6B7280" font-size="13">护士复核、行动、关单</text>
-      <line x1="720" y1="452" x2="776" y2="452" stroke="#EF4444" stroke-width="2" marker-end="url(#a4)"/>
-
-      <!-- Arrows: 档 → step 1 -->
-      <path d="M370 200 Q420 64, 476 64" fill="none" stroke="#3B82F6" stroke-width="2" marker-end="url(#a1)"/>
-
-      <!-- Arrows between steps -->
-      <line x1="600" y1="104" x2="600" y2="120" stroke="#9CA3AF" stroke-width="1.5"/>
-      <line x1="600" y1="204" x2="600" y2="220" stroke="#9CA3AF" stroke-width="1.5"/>
-      <line x1="600" y1="304" x2="600" y2="320" stroke="#9CA3AF" stroke-width="1.5"/>
-      <line x1="600" y1="404" x2="600" y2="420" stroke="#9CA3AF" stroke-width="1.5" stroke-dasharray="4,3"/>
-
-      <!-- Return arrow: step 4 back to 档 -->
-      <path d="M480 380 Q400 420, 340 360" fill="none" stroke="#10B981" stroke-width="2.5" marker-end="url(#a3)"/>
-      <!-- Return arrow: step 5 back to 档 -->
-      <path d="M480 460 Q340 480, 280 370" fill="none" stroke="#EF4444" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#a4)"/>
-
-      <!-- Labels on return arrows -->
-      <text x="380" y="408" fill="#10B981" font-size="11" font-weight="600">自动入档</text>
-      <text x="340" y="470" fill="#EF4444" font-size="11" font-weight="600">复核后入档</text>
-      <text x="408" y="140" fill="#3B82F6" font-size="11" font-weight="600">读取基线</text>
-    </svg>
-  </div>
-</section>
-
-<!-- ==================== SLIDE 5: Exception Handling ==================== -->
-<section class="slide" id="s5" style="justify-content:center;">
-  <div class="slide-label">分级响应</div>
-  <h2>三级事件分类</h2>
-  <p class="subtitle" style="margin-bottom:36px;">每次服务产生的数据，按严重程度分为三级，对应不同的处理方式。</p>
-
-  <div style="display:flex; flex-direction:column; gap:20px; max-width:960px; margin:0 auto;">
-
-    <!-- Red -->
-    <div style="display:flex; gap:20px; align-items:stretch;">
-      <div style="flex:1; padding:24px 28px; border-left:5px solid #EF4444; background:#FEF2F2; border-radius:0 14px 14px 0;">
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
-          <div style="font-size:20px; font-weight:700; color:#991B1B;">红色 | 紧急事件</div>
-        </div>
-        <p style="font-size:15px; color:var(--gray-700); line-height:1.7;">护理员直接当场求助 120 或联系护士进一步处理。处理后护士手动输入事件信息，更新档案。</p>
-      </div>
-      <div style="width:300px; flex-shrink:0; padding:20px 24px; border-radius:14px; background:#FEF2F2; border:1px solid #FECACA; display:flex; align-items:center;">
-        <div>
-          <div style="font-size:12px; color:#991B1B; font-weight:600; margin-bottom:6px;">示例</div>
-          <p style="font-size:15px; color:var(--gray-700); line-height:1.6;">老人在服务当场昏迷</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Yellow -->
-    <div style="display:flex; gap:20px; align-items:stretch;">
-      <div style="flex:1; padding:24px 28px; border-left:5px solid #F59E0B; background:#FFFBEB; border-radius:0 14px 14px 0;">
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
-          <div style="font-size:20px; font-weight:700; color:#92400E;">黄色 | 预警事件</div>
-        </div>
-        <p style="font-size:15px; color:var(--gray-700); line-height:1.7;">由 AI 判断触发，需要护士复核。预警事件有可能需要护士提示参保人或其家属。</p>
-      </div>
-      <div style="width:300px; flex-shrink:0; padding:20px 24px; border-radius:14px; background:#FFFBEB; border:1px solid #FDE68A; display:flex; align-items:center;">
-        <div>
-          <div style="font-size:12px; color:#92400E; font-weight:600; margin-bottom:6px;">示例</div>
-          <p style="font-size:15px; color:var(--gray-700); line-height:1.6;">老人在连续两次服务中都表现出严重腹泻</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Green -->
-    <div style="display:flex; gap:20px; align-items:stretch;">
-      <div style="flex:1; padding:24px 28px; border-left:5px solid #10B981; background:#F0FDF4; border-radius:0 14px 14px 0;">
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
-          <div style="font-size:20px; font-weight:700; color:#065F46;">绿色 | 正常记录</div>
-        </div>
-        <p style="font-size:15px; color:var(--gray-700); line-height:1.7;">正常记录自动入档，不需要任何人工介入。</p>
-      </div>
-      <div style="width:300px; flex-shrink:0; padding:20px 24px; border-radius:14px; background:#F0FDF4; border:1px solid #BBF7D0; display:flex; align-items:center;">
-        <div>
-          <div style="font-size:12px; color:#065F46; font-weight:600; margin-bottom:6px;">示例</div>
-          <p style="font-size:15px; color:var(--gray-700); line-height:1.6;">无特殊情况，各项观察正常</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ==================== SLIDE 6: Landing 1 ==================== -->
 <section class="slide" id="s6">
@@ -834,19 +739,20 @@ p, li { font-size: 17px; line-height: 1.7; color: var(--gray-700); }
     <div class="split-left">
       <div class="desc-block">
         <h4>场景</h4>
-        <p>在结束服务的时候，点击结束，视频录音都结束，护理员要填写一份问卷，然后提交。</p>
+        <p>护理员完成上门服务后，在提交工单前填写健康观察问卷。</p>
       </div>
       <div class="desc-block">
-        <h4>问卷内容</h4>
+        <h4>设计原则</h4>
         <ul class="bullet-list">
-          <li><b>生命体征数据</b>：血压（收缩压/舒张压）、脉搏、体温、呼吸频率</li>
-          <li><b>约 10 个观察问题 + 选项</b>：排便情况、饮食情况、皮肤状况、睡眠质量、情绪与意识等。难度不高，护理员只要选择就可以</li>
-          <li><b>特殊情况输入框</b>：如果有特殊情况要报告，问卷提供一个输入框，也可以语音输入</li>
+          <li><b>所有问题默认"正常"</b>，如果一切正常，护理员不用花时间逐个选择</li>
+          <li>每个问题只有 <b style="color:#16A34A;">正常</b> / <b style="color:#DC2626;">异常</b> 两个选项，异常时才需要操作</li>
+          <li>最后一个输入框：要求描述所有异常及补充信息，<b style="color:var(--blue);">支持语音输入</b></li>
+          <li>生命体征数据为数值输入（如有测量）</li>
         </ul>
       </div>
       <div class="desc-block">
         <h4>提交后</h4>
-        <p>AI 会运行一次健康情况判断。如果识别出风险，会给一个 <b style="color:#EF4444;">Red Flag</b>，escalate 到护士做人工复核（见落地③）。</p>
+        <p>AI 基于健康基线运行分析。正常自动归档；异常则生成 <b style="color:#EF4444;">风险事件</b>，通知护士复核。</p>
       </div>
     </div>
 
@@ -856,144 +762,90 @@ p, li { font-size: 17px; line-height: 1.7; color: var(--gray-700); }
         <div class="phone-status-bar"></div>
         <div class="phone-header">
           <span class="ph-back">&lt;</span>
-          <span class="ph-title">服务数据记录</span>
+          <span class="ph-title">健康观察</span>
         </div>
         <div class="phone-body">
           <div class="phone-section">
-            <div class="phone-section-title">生命体征</div>
-            <div class="phone-field">
-              <label>血压</label>
-              <div class="pf-input">
-                <span class="val">131</span><span class="sep">/</span><span class="val">77</span>
-                <span class="unit">mmHg</span>
-              </div>
-            </div>
-            <div class="phone-field">
-              <label>脉搏</label>
-              <div class="pf-input"><span class="val">115</span><span class="unit">次/分</span></div>
-            </div>
-            <div class="phone-field">
-              <label>体温</label>
-              <div class="pf-input"><span class="val">36.5</span><span class="unit">&deg;C</span></div>
-            </div>
-            <div class="phone-field">
-              <label>呼吸</label>
-              <div class="pf-input"><span class="val">18</span><span class="unit">次/分</span></div>
-            </div>
+            <div class="phone-section-title">观察问卷</div>
+            <div class="obs-card"><span class="obs-name">意识状态</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">行为表现</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">呼吸状况</span><div class="obs-toggle"><span class="sel-ok">正常</span><span class="sel-warn">异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">饮食饮水</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">吞咽功能</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">排尿情况</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">排便情况</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">移动能力</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">疼痛反馈</span><div class="obs-toggle"><span class="sel-ok">正常</span><span class="sel-warn">异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">皮肤/水肿</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">用药情况</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
+            <div class="obs-card"><span class="obs-name">睡眠/情绪</span><div class="obs-toggle"><span class="sel-ok">正常</span><span>异常</span></div></div>
           </div>
 
           <div class="phone-section">
-            <div class="phone-section-title">观察问卷（约 10 题）</div>
-            <div class="obs-card">
-              <span class="obs-name">排便情况</span>
-              <div class="obs-toggle">
-                <span class="sel-ok">正常</span><span>偏少</span><span>异常</span>
-              </div>
-            </div>
-            <div class="obs-card">
-              <span class="obs-name">饮食情况</span>
-              <div class="obs-toggle">
-                <span class="sel-ok">正常</span><span>偏少</span><span>拒食</span>
-              </div>
-            </div>
-            <div class="obs-card">
-              <span class="obs-name">皮肤状况</span>
-              <div class="obs-toggle">
-                <span class="sel-ok">正常</span><span class="sel-warn">发红</span><span>破损</span>
-              </div>
-            </div>
-            <div class="obs-card">
-              <span class="obs-name">睡眠质量</span>
-              <div class="obs-toggle">
-                <span class="sel-ok">正常</span><span>一般</span><span>很差</span>
-              </div>
-            </div>
-            <div class="obs-card">
-              <span class="obs-name">情绪状态</span>
-              <div class="obs-toggle">
-                <span class="sel-ok">正常</span><span>低落</span><span>烦躁</span>
-              </div>
-            </div>
-            <div class="obs-card">
-              <span class="obs-name">疼痛反馈</span>
-              <div class="obs-toggle">
-                <span class="sel-ok">无</span><span>轻微</span><span>明显</span>
-              </div>
-            </div>
-            <div style="font-size:11px; color:#9CA3AF; text-align:center; margin: 2px 0 8px;">... 更多观察题</div>
+            <div class="phone-section-title">生命体征（如有测量）</div>
+            <div class="phone-field"><label>血压</label><div class="pf-input"><span class="val">131</span><span class="sep">/</span><span class="val">77</span><span class="unit">mmHg</span></div></div>
+            <div class="phone-field"><label>体温</label><div class="pf-input"><span class="val">36.5</span><span class="unit">&deg;C</span></div></div>
+            <div class="phone-field"><label>体重</label><div class="pf-input"><span class="val">49.5</span><span class="unit">kg</span></div></div>
           </div>
 
           <div class="phone-section">
-            <div class="phone-section-title">特殊情况（选填）</div>
-            <div style="background:#fff; border:1px solid #E5E5E5; border-radius:10px; padding:10px 12px; min-height:48px; display:flex; align-items:flex-start; gap:8px;">
-              <span style="font-size:12px; color:#9CA3AF; line-height:1.5;">输入特殊情况，也可语音输入...</span>
-              <span style="margin-left:auto; font-size:16px; color:var(--blue); flex-shrink:0;">&#127908;</span>
+            <div class="phone-section-title">异常说明及补充信息</div>
+            <div style="background:#fff; border:1px solid #E5E5E5; border-radius:10px; padding:10px 12px; min-height:56px; display:flex; align-items:flex-start; gap:8px;">
+              <span style="font-size:12px; color:#9CA3AF; line-height:1.5;">请描述异常情况及其他补充信息...<br>呼吸偶有异常，疼痛反馈增加。</span>
+              <span style="margin-left:auto; font-size:18px; color:var(--blue); flex-shrink:0; cursor:pointer;" title="语音输入">&#127908;</span>
             </div>
+            <div style="font-size:10px; color:#9CA3AF; margin-top:4px; text-align:right;">支持语音输入</div>
           </div>
         </div>
-        <div class="phone-btn blue">提交</div>
+        <div class="phone-btn blue">提交健康观察</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 8: Landing 3 ==================== -->
+<!-- ==================== SLIDE 8: AI分析+护士分级介入 ==================== -->
 <section class="slide" id="s8">
-  <div class="slide-label">产品落地 3/5</div>
-  <h2>Risk Escalating 模型：需要护士介入的情况</h2>
+  <div class="slide-label">分级响应</div>
+  <h2>AI自动运行分析，护士分级介入</h2>
 
-  <div style="display:flex; gap:20px; margin-top:16px;">
-    <!-- Left: two-tier model -->
-    <div style="flex:1;">
-      <div style="padding:18px 20px; border-radius:12px; background:#F0FDF4; border:1px solid #BBF7D0; margin-bottom:14px;">
-        <h4 style="color:#065F46; margin-bottom:6px;">不需要 Escalating（日常）</h4>
-        <p style="font-size:14px; color:var(--gray-600); line-height:1.7;">AI 自动生成健康报告和护理建议，体现在护理员 App 和家属服务号。不涉及医疗建议和敏感信息，无需护士复核。对护理员只是提示观察重点和照护重点。</p>
+  <div style="max-width:900px; margin:24px auto 0; display:flex; flex-direction:column; gap:20px;">
+    <!-- 三级事件 -->
+    <div style="display:flex; gap:20px;">
+      <div style="flex:1; padding:24px; border-radius:14px; background:#F0FDF4; border:2px solid #BBF7D0; text-align:center;">
+        <div style="width:48px; height:48px; border-radius:50%; background:#16A34A; color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:700; margin:0 auto 12px;">绿</div>
+        <h4 style="font-size:18px; font-weight:700; color:#065F46; margin-bottom:8px;">正常</h4>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.7;">AI 自动处理<br>结果入档<br><b style="color:#065F46;">无需人工介入</b></p>
       </div>
-
-      <div style="padding:18px 20px; border-radius:12px; background:#FEF2F2; border:1.5px solid #FECACA;">
-        <h4 style="color:#991B1B; margin-bottom:6px;">需要 Escalating（<span style="color:#EF4444;">Red Flag</span>）</h4>
-        <p style="font-size:14px; color:var(--gray-600); line-height:1.7;">需要逐项定义的触发条件。一旦触发，escalate 到护士做人工复核。典型情况：老人身体指标连续异常，护士认为应该去医院。</p>
-        <p style="font-size:14px; color:#991B1B; line-height:1.7; margin-top:8px; font-weight:600;">核心价值：赋予长护险机构「识别健康异常并尽到提醒责任」的重大业务能力。</p>
+      <div style="flex:1; padding:24px; border-radius:14px; background:#FFFBEB; border:2px solid #FDE68A; text-align:center;">
+        <div style="width:48px; height:48px; border-radius:50%; background:#EAB308; color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:700; margin:0 auto 12px;">黄</div>
+        <h4 style="font-size:18px; font-weight:700; color:#92400E; margin-bottom:8px;">预警</h4>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.7;">AI 识别到异常<br>生成风险事件<br><b style="color:#92400E;">护士复核</b></p>
+      </div>
+      <div style="flex:1; padding:24px; border-radius:14px; background:#FEF2F2; border:2px solid #FECACA; text-align:center;">
+        <div style="width:48px; height:48px; border-radius:50%; background:#DC2626; color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:700; margin:0 auto 12px;">红</div>
+        <h4 style="font-size:18px; font-weight:700; color:#991B1B; margin-bottom:8px;">紧急</h4>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.7;">多项严重异常<br>生成紧急事件<br><b style="color:#991B1B;">护士立即复核</b></p>
       </div>
     </div>
 
-    <!-- Right: flow -->
-    <div style="flex:1;">
-      <div class="process-flow" style="margin-top:0;">
-        <div class="pf-step">
-          <div class="pf-connector"><div class="pf-dot blue"></div><div class="pf-line"></div></div>
-          <div class="pf-content" style="background:#EFF6FF;">
-            <h4>护理员提交问卷后，AI 自动运行健康判断</h4>
-            <p style="font-size:13px;">基于本次数据和历史档案，识别是否存在需要关注的风险信号。</p>
-          </div>
-        </div>
-        <div class="pf-step">
-          <div class="pf-connector"><div class="pf-dot" style="background:#EF4444;"></div><div class="pf-line"></div></div>
-          <div class="pf-content" style="background:#FEF2F2;">
-            <h4>识别出风险 → <span style="color:#EF4444;">Red Flag</span></h4>
-            <p style="font-size:13px;">推送至护士 Dashboard 待处理队列，护士必须复核。</p>
-            <div class="pf-samples">
-              <span class="pf-sample">身体指标连续异常</span>
-              <span class="pf-sample">皮肤异常/压疮风险</span>
-              <span class="pf-sample">跌倒等安全事件</span>
-              <span class="pf-sample">更多规则需护理专业人员定义</span>
-            </div>
-          </div>
-        </div>
-        <div class="pf-step">
-          <div class="pf-connector"><div class="pf-dot green"></div><div class="pf-line"></div></div>
-          <div class="pf-content" style="background:#F0FDF4;">
-            <h4>护士复核并采取行动</h4>
-            <p style="font-size:13px;">如护士采取了行动（如电话通知参保人/家属、建议就医），额外记录采取的行动。</p>
-          </div>
-        </div>
-        <div class="pf-step">
-          <div class="pf-connector"><div class="pf-dot gold"></div></div>
-          <div class="pf-content" style="background:linear-gradient(135deg, #FFFBF5, #FFF5E6); border: 1.5px solid var(--gold);">
-            <h4>结论入档</h4>
-            <p style="font-size:13px;">复核结论、采取的行动、是否更新护理计划，全部记录入参保人档案。</p>
-          </div>
-        </div>
+    <!-- 核心逻辑 -->
+    <div style="background:#fff; border-radius:14px; border:1.5px solid #E2E8F0; padding:24px 28px;">
+      <div style="font-size:16px; font-weight:700; color:var(--gray-900); margin-bottom:16px;">核心逻辑</div>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+        <div style="width:8px; height:8px; border-radius:50%; background:#2563EB; flex-shrink:0;"></div>
+        <span style="font-size:15px; color:var(--gray-700); line-height:1.6;">每次有新数据进入系统，AI <b>基于健康基线</b>自动分析，判定事件等级</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+        <div style="width:8px; height:8px; border-radius:50%; background:#16A34A; flex-shrink:0;"></div>
+        <span style="font-size:15px; color:var(--gray-700); line-height:1.6;">大部分情况为绿色，<b>自动归档</b>，不打扰任何人</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+        <div style="width:8px; height:8px; border-radius:50%; background:#EAB308; flex-shrink:0;"></div>
+        <span style="font-size:15px; color:var(--gray-700); line-height:1.6;">黄色/红色事件推送至护士，护士<b>复核确认</b>并记录处理结果</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:8px; height:8px; border-radius:50%; background:#C68B3E; flex-shrink:0;"></div>
+        <span style="font-size:15px; color:var(--gray-700); line-height:1.6;">所有结果<b>回写档案</b>，AI 判断是否更新健康基线</span>
       </div>
     </div>
   </div>
@@ -1113,22 +965,34 @@ p, li { font-size: 17px; line-height: 1.7; color: var(--gray-700); }
   <div class="slide-label">待讨论</div>
   <h2>待讨论</h2>
 
-  <div style="margin-top: 36px; display: flex; flex-direction: column; gap: 24px;">
-    <div style="display: flex; gap: 16px; align-items: flex-start;">
-      <div style="width: 36px; height: 36px; border-radius: 10px; background: var(--gold-light); color: var(--gold-dark); font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
-      <div><h3>整体方案逻辑是否成立？</h3></div>
+  <div style="margin-top: 36px; display: flex; gap: 32px;">
+    <!-- 事项1 -->
+    <div style="flex:1; background:#fff; border-radius:16px; border:2px solid var(--gold); padding:28px 24px;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:36px; border-radius:10px; background:var(--gold-light); color:var(--gold-dark); font-size:16px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
+        <h3 style="font-size:18px; margin:0;">产品使用与日常流程</h3>
+      </div>
+      <p style="font-size:15px; color:var(--gray-600); line-height:1.8;">从使用产品、日常流程的角度，有什么建议？</p>
+      <ul style="margin-top:12px; font-size:14px; color:var(--gray-500); line-height:2; padding-left:20px;">
+        <li>护理员填写问卷的流程是否顺畅？</li>
+        <li>护士复核风险事件的操作是否便捷？</li>
+        <li>健康档案的信息展示是否清晰？</li>
+        <li>整体流程中有哪些环节可以优化？</li>
+      </ul>
     </div>
-    <div style="display: flex; gap: 16px; align-items: flex-start;">
-      <div style="width: 36px; height: 36px; border-radius: 10px; background: var(--gold-light); color: var(--gold-dark); font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
-      <div><h3>哪些环节还有更多价值可以挖掘？</h3></div>
-    </div>
-    <div style="display: flex; gap: 16px; align-items: flex-start;">
-      <div style="width: 36px; height: 36px; border-radius: 10px; background: var(--gold-light); color: var(--gold-dark); font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
-      <div><h3>具体交互方式是否合适？</h3></div>
-    </div>
-    <div style="display: flex; gap: 16px; align-items: flex-start;">
-      <div style="width: 36px; height: 36px; border-radius: 10px; background: var(--gold-light); color: var(--gold-dark); font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
-      <div><h3>后续：需要护理主管评估和提供更合理的触发规则</h3></div>
+    <!-- 事项2 -->
+    <div style="flex:1; background:#fff; border-radius:16px; border:2px solid var(--gold); padding:28px 24px;">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:36px; height:36px; border-radius:10px; background:var(--gold-light); color:var(--gold-dark); font-size:16px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
+        <h3 style="font-size:18px; margin:0;">健康管理的专业逻辑</h3>
+      </div>
+      <p style="font-size:15px; color:var(--gray-600); line-height:1.8;">对于健康管理相关的专业逻辑，需要护理专业人员定义具体规则：</p>
+      <ul style="margin-top:12px; font-size:14px; color:var(--gray-500); line-height:2; padding-left:20px;">
+        <li>护理员需要上报哪些具体情况？</li>
+        <li>如何对事件预警进行分类（绿/黄/红）？</li>
+        <li>什么条件触发黄色预警？什么条件触发红色紧急？</li>
+        <li>健康基线的评估规则如何定义？</li>
+      </ul>
     </div>
   </div>
 </section>
